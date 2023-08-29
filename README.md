@@ -1,1 +1,4 @@
 # Algorithms
+### Knapsack
+#### Brute force
+
