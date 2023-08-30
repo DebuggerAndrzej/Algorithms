@@ -1,4 +1,4 @@
-# Algorithms
-### Knapsack
-#### Brute force
+### Algorithms
+**Knapsack**:
+- Brute force
 

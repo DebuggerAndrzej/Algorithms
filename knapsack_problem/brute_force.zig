@@ -1,6 +1,6 @@
 const std = @import("std");
 
-fn bruteKnapSack(remaining_capacity: u8, weights: []u8, values: []u16, iteration: u8) u16 {
+fn bruteKnapSack(remaining_capacity: u64, weights: []u64, values: []u64, iteration: u64) u64 {
     if (iteration == 0 or remaining_capacity == 0) {
         return 0;
     }
@@ -15,12 +15,10 @@ fn bruteKnapSack(remaining_capacity: u8, weights: []u8, values: []u16, iteration
     }
 }
 
-pub fn main() !void {
-    const stdout = std.io.getStdOut().writer();
+test bruteKnapSack {
+    const capacity: u64 = 50;
+    var weights = [_]u64{ 10, 15, 40, 30 };
+    var values = [_]u64{ 60, 50, 250, 450 };
 
-    const capacity: u8 = 50;
-    var weights = [_]u8{ 10, 15, 40, 30 };
-    var values = [_]u16{ 60, 50, 250, 450 };
-
-    try stdout.print("Brute force solution value sum: {d}", .{bruteKnapSack(capacity, &weights, &values, weights.len)});
+    try std.testing.expect(bruteKnapSack(capacity, &weights, &values, weights.len) == 510);
 }
