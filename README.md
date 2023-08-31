@@ -1,4 +1,4 @@
 ### Algorithms
 **Knapsack**:
-- Brute force
+- [Brute force](knapsack_problem/brute_force.md)
 
