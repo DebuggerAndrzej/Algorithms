@@ -22,4 +22,4 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: goto-bus-stop/setup-zig@v2
-      - run: zig fmt --check knapsack_problem/*.zig
+      - run: zig fmt --check */*/*.zig
