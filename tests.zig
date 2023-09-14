@@ -3,4 +3,5 @@ comptime {
     _ = @import("sorting/selection_sort/selection_sort.zig");
     _ = @import("sorting/bubble_sort/bubble_sort.zig");
     _ = @import("sorting/insertion_sort/insertion_sort.zig");
+    _ = @import("sorting/quicksort/quicksort.zig");
 }
